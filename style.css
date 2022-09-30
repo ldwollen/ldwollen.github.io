@@ -1,23 +1,6 @@
 body {
   background-color: skyblue;
 }
-/* --- put your css here --- */ 
-
-/* external css is imported into html using the <link> tag in the <head> section, as shown below.
-
-  <head>
-    <link rel="stylesheet" href="assignment02.css">
-  </head>
-
-*/
-
-
-/* --- pre-existing css --- */
-
-
-body {
-  background-color: powderblue;
-}
 
 #igottabeme {
   font-family: Arial, Helvetica, sans-serif;
