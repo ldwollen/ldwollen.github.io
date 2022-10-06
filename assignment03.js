@@ -11,3 +11,19 @@ addButton.addEventListener("click", e => {
   let num = (parseFloat(inputObject.value) -32) * (5/9)
   C_output.value = num
 })
+
+function calculateGCD() {
+  let firstNum = document.getElementById("first_number").value;
+  let secondNum = document.getElementById("second_number").value;
+  let HCF = 0;
+  //method taken from https://www.programiz.com/javascript/examples/lcm
+  for (let i = 1; i <= firstNum && i <= secondNum; i++) {
+    if( firstNum % i == 0 && secondNum % i == 0) {
+        HCF = i;
+    }
+}
+  let LCM = (firstNum * secondNum)/(HCF)
+  let GCD = (firstNum * secondNum)/(LCM)
+  document.getElementById("GCDanswer").value = GCD;
+  
+}
