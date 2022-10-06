@@ -37,5 +37,5 @@ function findSumOfInts() {
      answer = answer + curNum;
   }
   
-  document.getElementById("sumOfIntsAnswer").value = answer;
+  document.getElementById("sumOutput").value = answer;
 }
