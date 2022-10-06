@@ -27,3 +27,15 @@ function calculateGCD() {
   document.getElementById("GCDanswer").value = GCD;
   
 }
+
+function findSumOfInts() {
+  let wholeNum = document.getElementById("integer_input").value;
+  let answer = 0;
+  const arrNums = wholeNum.split("");
+   for (let i = 0; i < arrNums.length; i++) {
+    let curNum = parseInt(arrNums[i]);
+     answer = answer + curNum;
+  }
+  
+  document.getElementById("sumOfIntsAnswer").value = answer;
+}
