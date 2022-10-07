@@ -69,7 +69,6 @@ function combine_Names() {
   }
 
   let fullName = prefix + firstName + lastName + suffix;
-  alert(fullName);
   document.getElementById("full_Name").value = fullName;
   
 }
