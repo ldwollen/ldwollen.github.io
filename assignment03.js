@@ -39,3 +39,37 @@ function findSumOfInts() {
   
   document.getElementById("sumOutput").value = answer;
 }
+
+function combine_Names() {
+  let prefix = "";
+  let firstName = "";
+  let lastName = "";
+  let suffix = "";
+  if (document.getElementById("Prefix").value.length == 0) {
+    prefix = "";
+  } else {
+    prefix = document.getElementById("Prefix").value + ".";
+  }
+
+  if (document.getElementById("First_Name").value.length == 0) {
+    alert("First Name field cannot be empty");
+  } else {
+    firstName = " " + document.getElementById("First_Name").value;
+  }
+
+  if (document.getElementById("Last_Name").value.length == 0) {
+    alert("Last Name field cannot be empty");
+  } else {
+    lastName = " " + document.getElementById("Last_Name").value;
+  }
+  if (document.getElementById("Suffix").value.length == 0) {
+    suffix = "";
+  } else {
+    suffix = ", " + document.getElementById("Suffix").value;
+  }
+
+  let fullName = prefix + firstName + lastName + suffix;
+
+  document.getElementById("full_Name").value = fullName;
+}
+
