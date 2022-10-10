@@ -1,3 +1,6 @@
+//This function takes in two numbers from the input boxes, assigned to variables, and calculates the GCD which is set to a new variable
+//this method was found online and implemented with some updates so it fit my code and HTML file
+//The answer is set to the value of the last input box 
 function calculateGCD() {
   let firstNum = document.getElementById("first_number").value;
   let secondNum = document.getElementById("second_number").value;
@@ -13,7 +16,8 @@ function calculateGCD() {
   document.getElementById("GCDanswer").value = GCD;
   
 }
-
+//this function sets the input value to a variable, then splits the string at each new character and adds it to a total in a loop
+//this total is then output to the last box as the answer
 function findSumOfInts() {
   let wholeNum = document.getElementById("integer_input").value;
   let answer = 0;
@@ -25,7 +29,10 @@ function findSumOfInts() {
   
   document.getElementById("sumOutput").value = answer;
 }
-
+//this function takes the input from each box and sets it to a string variable
+//there are if statements for each one, as according to the parameters of the assignment there must be input in at least the first and last name boxes
+//if the statement is true then it sets the variable to a string, and for the non required ones, if it is false the value is just set to an empty string ("")
+//a variable for the entire name is set, and each individual variable is connected together into that one which is then outputted to the last input element
 function combine_Names() {
   let prefix = "";
   let firstName = "";
