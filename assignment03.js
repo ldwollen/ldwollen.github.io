@@ -65,6 +65,10 @@ function combine_Names() {
   document.getElementById("full_Name").value = fullName;
   
 }
+//this code was modeled after a program from this URL https://www.geeksforgeeks.org/simple-tic-tac-toe-game-using-javascript/
+//I coded the function myfunc_new to make it accurate for the assignment, and borrowed the HTML and some of the CSS for formatting. I changed names to make it work. 
+//I also edited and implemented the code differently than original to make it a player versus the computer rather than two players.
+//I created loops and if statements in my method to check whether a box was checked when a user clicks it. If it wasn't, then the X player (user) added their symbol directly followed by a 0 symbol from the computer in one of the remaining unchecked boxes. Each click calls to my function as well as the base function to check if there is a winner. 
 
 var checker = 0;
 var winner;
