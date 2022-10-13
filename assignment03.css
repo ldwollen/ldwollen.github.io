@@ -1,6 +1,10 @@
 <style>
     /* CSS Code */
     /* Heading */
+
+    #part2 {
+        font-size: 30px;
+        border: 2px solid black;
     h1 {
         color: orangered;
         font-size: 45px;
