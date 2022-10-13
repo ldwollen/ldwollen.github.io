@@ -48,6 +48,9 @@ img[alt="bird icon"] {
   left: 250px;
   z-index: 1;
 }
+<!--
+This is the id of the div that the image (bird icon) needs to be in
+-->
 #positionMe {
   position: relative;
 }
