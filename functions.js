@@ -30,7 +30,7 @@ function outputCartRow(item, total) {
     subtotal += parseFloat(curTotal);
 
     // populate HTML table with data
-    cell0.innerHTML = "<img src = ../" + cart[i].product.filename + ">"; // image
+    cell0.innerHTML = "<img src = '../" + cart[i].product.filename + "'>"; // image
     cell1.innerHTML = cart[i].product.title; // product
     cell2.innerHTML = quantity; // quantity
     cell3.innerHTML = "$" + price; // price
