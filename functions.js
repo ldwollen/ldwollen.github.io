@@ -1,3 +1,7 @@
+function calculateTotal(quantity, price) {
+    return quantity * price;
+}
+
 function outputCartRow(item, total) {
   // https://loganzipper.github.io/Assignments/assignment03/js/functions.js
 
