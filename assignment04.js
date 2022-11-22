@@ -103,3 +103,63 @@ for (let i = 0; i < 5; i++) {
 };
 
 r.reduce(ans => arcTPlusNum(ans));
+
+document
+  .getElementById("loadjson")
+  .addEventListener("click", loadJson);
+document
+  .getElementById("loadpriorcountry")
+  .addEventListener("click", loadPriorCountry);
+document
+  .getElementById("loadnextcountry")
+  .addEventListener("click", loadNextCountry);
+
+let country = 0
+let json
+function loadJson() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange 
+    = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          // document.getElementById("covidData").innerHTML 
+          //   = "JSON data loaded.";
+          json = JSON.parse(this.responseText);
+        }
+      };
+  xhttp.open("GET", "https://api.covid19api.com/summary", true);
+  xhttp.send();
+}
+
+function loadPriorCountry () {
+  country--
+  if (country < 0) 
+    country = 0
+ document.getElementById("div1").innerHTML = json.Countries[country].ID; 
+   document.getElementById("div2").innerHTML = json.Countries[country].Country;
+  document.getElementById("div3").innerHTML = json.Countries[country].CountryCode;
+  document.getElementById("div4").innerHTML = json.Countries[country].Slug;
+  document.getElementById("div5").innerHTML = json.Countries[country].NewConfirmed;
+  document.getElementById("div6").innerHTML = json.Countries[country].TotalConfirmed;
+  document.getElementById("div7").innerHTML = json.Countries[country].NewDeaths;
+  document.getElementById("div8").innerHTML = json.Countries[country].TotalDeaths;
+  document.getElementById("div9").innerHTML = json.Countries[country].NewRecovered;
+   document.getElementById("div10").innerHTML = json.Countries[country].TotalRecovered;
+   document.getElementById("div11").innerHTML = json.Countries[country].Date;
+}
+
+function loadNextCountry () {
+  country++
+  if (country > json.Countries.length - 1) 
+    country = json.Countries.length - 1
+ document.getElementById("div1").innerHTML = json.Countries[country].ID; 
+   document.getElementById("div2").innerHTML = json.Countries[country].Country;
+  document.getElementById("div3").innerHTML = json.Countries[country].CountryCode;
+  document.getElementById("div4").innerHTML = json.Countries[country].Slug;
+  document.getElementById("div5").innerHTML = json.Countries[country].NewConfirmed;
+  document.getElementById("div6").innerHTML = json.Countries[country].TotalConfirmed;
+  document.getElementById("div7").innerHTML = json.Countries[country].NewDeaths;
+  document.getElementById("div8").innerHTML = json.Countries[country].TotalDeaths;
+  document.getElementById("div9").innerHTML = json.Countries[country].NewRecovered;
+   document.getElementById("div10").innerHTML = json.Countries[country].TotalRecovered;
+   document.getElementById("div11").innerHTML = json.Countries[country].Date;
+}
