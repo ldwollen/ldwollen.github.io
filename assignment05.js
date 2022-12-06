@@ -150,7 +150,7 @@ app.controller('myCtrl', function($scope) {
   //the scope variable defines a payments variable
   $scope.payments = [];
   //the scope variable defines a populate function
-  $scope.populate = function () {
+  $scope.populate = function() {
     //calls the update form function
     updateForm();
     //variables for various placeholders, all building off of each other
